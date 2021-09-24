@@ -1,0 +1,11 @@
+Declare
+      Cursor Cur_Cli Is
+      Select cd_cliente, nm_cliente
+      From Cliente;
+Begin
+      For Reg_Cli in Cur_Cli
+      Loop
+            Dbms_Output.Put_Line
+                        (Reg_Cli.nm_cliente);
+      End Loop;
+End;
